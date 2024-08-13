@@ -1,0 +1,75 @@
+@Desafio.Api_HostAddress = http://localhost:5242
+
+### user GET 
+GET {{Desafio.Api_HostAddress}}/User/
+Accept: application/json
+
+### user GET 1
+GET {{Desafio.Api_HostAddress}}/User/1
+Accept: application/json
+
+
+### user POST 
+POST {{Desafio.Api_HostAddress}}/User/
+Content-Type: application/json
+
+{
+  "cpf": "05741329705",
+  "name": "joao",
+  "email": "joao@gmail.com",
+  "phone": "21980099744"
+}
+
+
+### PRODUCT GET 
+GET {{Desafio.Api_HostAddress}}/Product/
+Accept: application/json
+
+### PRODUCT POST 
+POST {{Desafio.Api_HostAddress}}/Product/
+Content-Type: application/json
+
+{
+  "cpf": "05741329705",
+  "name": "joao",
+  "email": "joao@gmail.com",
+  "phone": "21980099744"
+}
+
+
+### SALE GET 
+GET {{Desafio.Api_HostAddress}}/Sale/
+Accept: application/json
+
+### SALE GET 
+GET {{Desafio.Api_HostAddress}}/Sale/2
+Accept: application/json
+
+
+### SALE POST 
+POST {{Desafio.Api_HostAddress}}/Sale/
+Content-Type: application/json
+
+{
+  "listProductId": [
+    1,2,3
+  ],
+  "userId": 1
+}
+
+
+### SALE item  PUT 
+PUT {{Desafio.Api_HostAddress}}/Sale/
+Content-Type: application/json
+
+{
+  "saleId": 2,
+  "productId": 4
+}
+
+### SALE item DELETE 
+DELETE {{Desafio.Api_HostAddress}}/Sale/2/product/4
+
+### SALE item  PATCH 
+PATCH {{Desafio.Api_HostAddress}}/Sale/1/status/4
+
